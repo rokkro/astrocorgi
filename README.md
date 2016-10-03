@@ -1,7 +1,7 @@
 # astrocorgi
  A S T R O C O R G I - A mini game in Java.
  
-To use: Add stdlib.jar to the project's libraries in your IDE, then run corgiMain.java.
+To use: Add stdlib.jar to the project's libraries in your IDE (such as intellij in this case), then run corgiMain.java.
  
 # Possible todo:
  1. Greatly improve difficulty selection difference. Vary number of balls, speed, etc. (time consuming)
