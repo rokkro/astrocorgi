@@ -21,7 +21,7 @@ public class corgiBall{
     private int getRandomShip(){
         return (int)(Math.random()*4);
     }
-    private void accelerateBall(double acc){
+    private void accelerateBall(double acc){ //ball speed per difficulty, will likely redo in the future since i dislike how this is done
         switch((int)(Math.random()*4)) {
             case 0:
                 mX += (Math.random() * (.00001+acc)/(Math.random() * 1000));
@@ -56,11 +56,11 @@ public class corgiBall{
 
         }
     }
-    public void activateBall() {
+    public void activateBall() { 
         ballSpeed();
         if(ballBounce > 5)
             reset();
-        switch (ship) {
+        switch (ship) { //if shipHP is good, then move the ball/or set up ball if it's not already there
             case (0)://North
                 if(corgiCore.shipHP[ship]>0) {
                     getBall(corgiCore.corgiPosX, corgiScene.m1 -.01);
@@ -126,7 +126,7 @@ public class corgiBall{
         double boundaryA = corgiCore.corgiPosX - corgiScene.midBox;
         double boundaryB = corgiCore.corgiPosX + corgiScene.midBox;
         double boundaryC = corgiCore.corgiPosY - corgiScene.midBox;
-        double boundaryD = corgiCore.corgiPosY + corgiScene.midBox;
+        double boundaryD = corgiCore.corgiPosY + corgiScene.midBox; //Hitbox stuff. Not very pretty. Hoping to find a better solution.
         dir = '0';//unspecified direction
         dir2 = '0';
         if(ballPosX <=boundaryB && ballPosX >= corgiCore.corgiPosX + .01  && ballPosY <= boundaryD  && ballPosY >= boundaryC) {
@@ -142,7 +142,7 @@ public class corgiBall{
             dir2 = 'S';
         }
     }
-    public void reset(){
+    public void reset(){ //Reset ball
         ballExists=false;
         ship = getRandomShip();
         dir = dir2 =  '0';
