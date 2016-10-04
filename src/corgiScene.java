@@ -5,8 +5,7 @@ public class corgiScene {
 
     public static double mid = 0;
     /*After originally using this ^, I found it seems to be a bad idea to use this to define the middle,
-     as StdDraw.picture(.5 - -) recognizes the current center while StdDraw.picture(mid - -) does not
-     Now it can be used for shifting the background in the main game with alt+(left or right)*/
+     as StdDraw.picture(.5 - -) recognizes the current center while StdDraw.picture(mid - -) does not*/
     public static final double midBox = .06;
     public static double m1 = 0; //ship and treat positions
     public static double m2 = 1;
@@ -118,7 +117,7 @@ public class corgiScene {
             corgiCore.control(0,false);
             show(0);
             cd--;
-            countDown(cd);
+            countDown(cd); //YAY RECURSION!!!
             break;
         }
     }
@@ -145,7 +144,7 @@ public class corgiScene {
             return 1;
         }
     }
-    public static void shipAndTreats(){
+    public static void shipAndTreats(){ //Shows ship if its HP is good, a treat if it's not good
         StdDraw.setPenColor(StdDraw.WHITE);
         StdDraw.setFont(main);
         for(int i=0;i<corgiCore.shipHP.length;i++) {
@@ -185,7 +184,7 @@ public class corgiScene {
             }
         }
     }
-    public static int treat(){
+    public static int treat(){ //Beginning of game treat
         double treatBox = .03;
         StdDraw.picture(.5,.5,corgiCore.osPath + "treat.png");
         if((corgiCore.corgiPosX >=.5- treatBox && corgiCore.corgiPosX <= .5+ treatBox) &&
@@ -196,7 +195,7 @@ public class corgiScene {
         }
         return 0;
     }
-    public static void treatWin(){
+    public static void treatWin(){ //End of game treat collection
         double treatBox = .03;
         if((corgiCore.corgiPosX >=.5- treatBox && corgiCore.corgiPosX <= .5+ treatBox) && //North treat
                 (corgiCore.corgiPosY >=m1 - .035 - treatBox && corgiCore.corgiPosY <=m1 - .035 + treatBox))
@@ -211,7 +210,7 @@ public class corgiScene {
                 (corgiCore.corgiPosY >=.5- treatBox && corgiCore.corgiPosY <=.5+ treatBox))
                 corgiCore.shipHP[3]=-1;
     }
-    public static void barkPts()
+    public static void barkPts() //Barkbark. Shows the point counter on the left side of the screen
     {
         StdDraw.setPenColor(StdDraw.WHITE);
         StdDraw.text(.053, .89,"Bark Points");
@@ -227,7 +226,7 @@ public class corgiScene {
         if(corgiCore.points<10)
             StdDraw.text(.05,.83,corgiCore.points + "/10");
     }
-    public static void corgiHealthChk()
+    public static void corgiHealthChk() //Shows the HP bar on the left side
     {
         StdDraw.setPenColor(StdDraw.WHITE);
         StdDraw.setFont(disp);
@@ -241,7 +240,7 @@ public class corgiScene {
             StdDraw.setPenColor(StdDraw.RED);
         StdDraw.filledRectangle(.01,.95,.2-(width*(10-corgiCore.health)),.012);
     }
-    public static void lose(){
+    public static void lose(){ //basic losing screen
         reDraw();
         StdDraw.setFont(end);
         StdDraw.setPenColor(StdDraw.RED);
@@ -255,7 +254,7 @@ public class corgiScene {
         }
         show(0);
     }
-    public static void dogWin(){
+    public static void dogWin(){ //basic winning screen
         reDraw();
         StdDraw.setFont(end);
         StdDraw.setPenColor(StdDraw.GREEN);
