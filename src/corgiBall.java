@@ -127,7 +127,7 @@ public class corgiBall{
         double boundaryB = corgiCore.corgiPosX + corgiScene.midBox;
         double boundaryC = corgiCore.corgiPosY - corgiScene.midBox;
         double boundaryD = corgiCore.corgiPosY + corgiScene.midBox; //Hitbox stuff. Not very pretty. Hoping to find a better solution.
-        dir = '0';//unspecified direction
+        dir = '0';//unspecified direction. dir and dir2 exist to make sure the ball is caught correctly in the corners. See: http://imgur.com/a/QPfkW
         dir2 = '0';
         if(ballPosX <=boundaryB && ballPosX >= corgiCore.corgiPosX + .01  && ballPosY <= boundaryD  && ballPosY >= boundaryC) {
             dir = 'E';
