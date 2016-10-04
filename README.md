@@ -12,4 +12,4 @@ Note: Fonts seem to show differently on Windows vs Linux.
  4. Re-add audio files to game, if it doesn't cause lag.
 
 
-Stdlib is from http://introcs.cs.princeton.edu/java/stdlib/ (You may want to mute your audio when visiting).
+Stdlib is from http://introcs.cs.princeton.edu/java/stdlib/ (You may want to mute your speakers when visiting).
