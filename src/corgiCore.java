@@ -124,6 +124,16 @@ public  class corgiCore {
                 StdDraw.picture(corgiPosX, corgiPosY, osPath + dogf);
                 break;
         }
+        if(StdDraw.isKeyPressed(VK_1))
+           for(int i=0;i<s.length;i++){
+            s[i].mX+=.0001;
+            s[i].mY+=.0001;
+           }
+        if(StdDraw.isKeyPressed(VK_2))
+        for(int i=0;i<s.length;i++){
+         s[i].mX-=.0001;
+         s[i].mY-=.0001;
+        }
         if(shield) //hitbox if no direction is pressed
             hitBox(s, '1');
         corgiScene.show(5);
