@@ -24,20 +24,20 @@ public class corgiBall{
     private void accelerateBall(double acc){ //ball speed per difficulty, will likely redo in the future since i dislike how this is done
         switch((int)(Math.random()*4)) {
             case 0:
-                mX += (Math.random() * (.00001+acc)/(Math.random() * 1000));
+                mX += (Math.random() * (.00005+acc)/(Math.random() * 1000));
                 mY += (Math.random() * (.00001+acc)/(Math.random() * 1000));
                 break;
             case 1:
-                mX += (Math.random() * (.00002+acc)/(Math.random() * 1000));
-                mY += (Math.random() * (.00002+acc)/(Math.random() * 1000));
+                mX += (Math.random() * (.00007+acc)/(Math.random() * 1000));
+                mY += (Math.random() * (.00007+acc)/(Math.random() * 1000));
                 break;
             case 2:
-                mX += (Math.random() * (.00003+acc)/(Math.random() * 1000));
-                mY += (Math.random() * (.00003+acc)/(Math.random() * 1000));
+                mX += (Math.random() * (.00009+acc)/(Math.random() * 1000));
+                mY += (Math.random() * (.00009+acc)/(Math.random() * 1000));
                 break;
             case 3:
-                mX += (Math.random() * (.00005+acc)/(Math.random() * 1000));
-                mY += (Math.random() * (.00005+acc)/(Math.random() * 1000));
+                mX += (Math.random() * (.0001+acc)/(Math.random() * 1000));
+                mY += (Math.random() * (.0001+acc)/(Math.random() * 1000));
                 break;
         }
     }
