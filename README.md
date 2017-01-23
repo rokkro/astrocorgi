@@ -1,9 +1,10 @@
 # astrocorgi
- A S T R O C O R G I - A mini game in Java.
+
+If not using intelliJ, take the contents of src/ and put it in home - will fix if i return to this project in the future
+
+A mini game in Java.
  
 To use: Add stdlib.jar to the project's libraries in your IDE (such as intellij in this case), then run corgiMain.java.
-
-If not using intelliJ, take the contents of src/ and put it in home - will fix when i return to this project in the future
 
 Note: Fonts seem to show differently on Windows vs Linux. 
  
