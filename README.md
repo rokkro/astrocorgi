@@ -1,5 +1,7 @@
 # astrocorgi
 
+---Old-ish Project---
+
 If not using intelliJ, take the contents of src/ and put it in home - will fix if i return to this project in the future
 
 A mini game in Java.
